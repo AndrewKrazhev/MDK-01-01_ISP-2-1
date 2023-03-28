@@ -70,6 +70,12 @@
     <Compile Include="aboutForm.Designer.cs">
       <DependentUpon>aboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBEdit.Designer.cs">
+      <DependentUpon>DBEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="EasterEggOne.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </Compile>
     <EmbeddedResource Include="aboutForm.resx">
       <DependentUpon>aboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBEdit.resx">
+      <DependentUpon>DBEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EasterEggOne.resx">
       <DependentUpon>EasterEggOne.cs</DependentUpon>

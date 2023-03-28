@@ -73,5 +73,12 @@ namespace MyBD_prj
         {
             hintStatusLabel.Text = "";
         }
+
+        private void базаДанныхToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DBEdit dBEdit = new DBEdit();
+            dBEdit.MdiParent = this;
+            dBEdit.Show();
+        }
     }
 }
