@@ -28,12 +28,16 @@ namespace MyBD_prj
 
         private void DBEdit_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "arhiveDataSet.Dela". При необходимости она может быть перемещена или удалена.
+            this.delaTableAdapter.Fill(this.arhiveDataSet.Dela);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "arhiveDataSet.Fonds". При необходимости она может быть перемещена или удалена.
             //this.fondsTableAdapter.Fill(this.arhiveDataSet.Fonds);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "arhiveDataSet.Opis". При необходимости она может быть перемещена или удалена.
             //this.opisTableAdapter.Fill(this.arhiveDataSet.Opis);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "arhiveDataSet.Dela". При необходимости она может быть перемещена или удалена.
             //this.delaTableAdapter.Fill(this.arhiveDataSet.Dela);
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;   
+
 
         }
 

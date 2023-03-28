@@ -70,6 +70,11 @@
     <Compile Include="aboutForm.Designer.cs">
       <DependentUpon>aboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ArhiveDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArhiveDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DBEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +92,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Founds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Founds.Designer.cs">
+      <DependentUpon>Founds.cs</DependentUpon>
     </Compile>
     <Compile Include="InputForm.cs">
       <SubType>Form</SubType>
@@ -114,6 +125,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Founds.resx">
+      <DependentUpon>Founds.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InputForm.resx">
       <DependentUpon>InputForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +144,17 @@
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ArhiveDataSet.xsc">
+      <DependentUpon>ArhiveDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ArhiveDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ArhiveDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ArhiveDataSet.xss">
+      <DependentUpon>ArhiveDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -165,6 +190,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Arhive.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="cave_man_emoticon_emoji_sticker_inventor_icon_123518.ico" />
     <None Include="Resources\8_122645.png" />
     <None Include="Resources\power_reset_1847.png" />

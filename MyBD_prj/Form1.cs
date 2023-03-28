@@ -80,5 +80,12 @@ namespace MyBD_prj
             dBEdit.MdiParent = this;
             dBEdit.Show();
         }
+
+        private void фондыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Founds _foundsForm = new Founds();
+            _foundsForm.MdiParent = this;
+            _foundsForm.Show();
+        }
     }
 }

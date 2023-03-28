@@ -41,6 +41,7 @@ namespace MyBD_prj
         {
             DBPathBox.Text = Properties.Settings.Default.PathDB;
             NameBox.Text = Properties.Settings.Default.Name;
+            connectionBox.Text = Properties.Settings.Default.ArhiveConnectionString;
         }
 
         private void label2_Click(object sender, EventArgs e)
