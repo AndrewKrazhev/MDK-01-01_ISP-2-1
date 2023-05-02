@@ -69,46 +69,47 @@ namespace MyBD_prj
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-           
-            
-
-            var result = MessageBox.Show("Вы уверены, что хотите " +
-                "удалить текущую запись", 
-                "Удаление", MessageBoxButtons.YesNoCancel, 
-                MessageBoxIcon.Information);
-
-            switch (result)
+            if (this.editModeToolStripMenuItem.Checked)
             {
-                case DialogResult.Yes:
-                    resultLabel.Text = "Да";
+                var result = MessageBox.Show("Вы уверены, что хотите " +
+                    "удалить текущую запись",
+                    "Удаление", MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Information);
 
-                    try
-                    {
-                        this.delaBindingSource.RemoveCurrent();
-                        this.delaBindingSource.EndEdit();
-                        this.delaTableAdapter.Update(this.arhiveDataSet.Dela);
-                    }
-                    catch (Exception _ex)
-                    {
-                        MessageBox.Show(_ex.Message.ToString());
-                    }
+                switch (result)
+                {
+                    case DialogResult.Yes:
+                        resultLabel.Text = "Да";
+
+                        try
+                        {
+                            this.delaBindingSource.RemoveCurrent();
+                            this.delaBindingSource.EndEdit();
+                            this.delaTableAdapter.Update(this.arhiveDataSet.Dela);
+                        }
+                        catch (Exception _ex)
+                        {
+                            MessageBox.Show(_ex.Message.ToString());
+                        }
 
 
-                    break;
-                
-                case DialogResult.No:
-                    resultLabel.Text = "Нет";
-                    break;
-                
-                case DialogResult.Cancel:
-                    resultLabel.Text = "Отмена";
-                    break;
-                    
-                default:
-                    resultLabel.Text = "------";
-                    break;
+                        break;
+
+                    case DialogResult.No:
+                        resultLabel.Text = "Нет";
+                        break;
+
+                    case DialogResult.Cancel:
+                        resultLabel.Text = "Отмена";
+                        break;
+
+                    default:
+                        resultLabel.Text = "------";
+                        break;
+                }
             }
-        }
+            else { MessageBox.Show("Включите режим редактирования");}
+            }
 
         private void режимРедактированияToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -132,6 +133,11 @@ namespace MyBD_prj
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editModeToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

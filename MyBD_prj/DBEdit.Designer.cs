@@ -59,6 +59,9 @@
             this.opisTableAdapter = new MyBD_prj.ArhiveDataSetTableAdapters.OpisTableAdapter();
             this.dbBack = new System.Windows.Forms.Button();
             this.dbForward = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.dbStateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             deloNameLabel = new System.Windows.Forms.Label();
             deloDescLabel = new System.Windows.Forms.Label();
             deloBeginLabel = new System.Windows.Forms.Label();
@@ -73,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.opisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arhiveDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // deloNameLabel
@@ -123,7 +127,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 24);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -147,14 +151,14 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(745, 416);
-            this.splitContainer1.SplitterDistance = 277;
+            this.splitContainer1.Size = new System.Drawing.Size(725, 411);
+            this.splitContainer1.SplitterDistance = 270;
             this.splitContainer1.TabIndex = 0;
             // 
             // resultLabel
             // 
             this.resultLabel.AutoSize = true;
-            this.resultLabel.Location = new System.Drawing.Point(239, 394);
+            this.resultLabel.Location = new System.Drawing.Point(222, 314);
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.Size = new System.Drawing.Size(35, 13);
             this.resultLabel.TabIndex = 11;
@@ -256,7 +260,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(464, 416);
+            this.dataGridView1.Size = new System.Drawing.Size(451, 411);
             this.dataGridView1.TabIndex = 0;
             // 
             // idDataGridViewTextBoxColumn
@@ -349,12 +353,40 @@
             this.dbForward.UseVisualStyleBackColor = true;
             this.dbForward.Click += new System.EventHandler(this.dbForward_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dbStateToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(725, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // dbStateToolStripMenuItem
+            // 
+            this.dbStateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editModeToolStripMenuItem});
+            this.dbStateToolStripMenuItem.Name = "dbStateToolStripMenuItem";
+            this.dbStateToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.dbStateToolStripMenuItem.Text = "dbState";
+            // 
+            // editModeToolStripMenuItem
+            // 
+            this.editModeToolStripMenuItem.CheckOnClick = true;
+            this.editModeToolStripMenuItem.Name = "editModeToolStripMenuItem";
+            this.editModeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editModeToolStripMenuItem.Text = "editMode";
+            this.editModeToolStripMenuItem.Click += new System.EventHandler(this.editModeToolStripMenuItem_Click);
+            // 
             // DBEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 416);
+            this.ClientSize = new System.Drawing.Size(725, 435);
             this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(741, 150);
             this.Name = "DBEdit";
             this.Text = "DBEdit";
@@ -369,7 +401,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.opisBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arhiveDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -400,5 +435,8 @@
         private System.Windows.Forms.Label resultLabel;
         private System.Windows.Forms.Button dbForward;
         private System.Windows.Forms.Button dbBack;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem dbStateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editModeToolStripMenuItem;
     }
 }
