@@ -87,5 +87,10 @@ namespace MyBD_prj
             _foundsForm.MdiParent = this;
             _foundsForm.Show();
         }
+
+        private void editModeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //this.editModeToolStripMenuItem.Checked
+        }
     }
 }

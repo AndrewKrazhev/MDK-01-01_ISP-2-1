@@ -41,9 +41,9 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(505, 218);
+            this.btnSave.Location = new System.Drawing.Point(505, 200);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(75, 41);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -68,9 +68,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(586, 218);
+            this.button1.Location = new System.Drawing.Point(586, 200);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 41);
             this.button1.TabIndex = 11;
             this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = true;
@@ -96,13 +96,13 @@
             // button3
             // 
             this.button3.Image = global::MyBD_prj.Properties.Resources.power_reset_1847;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(602, 12);
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(369, 200);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(59, 71);
+            this.button3.Size = new System.Drawing.Size(130, 40);
             this.button3.TabIndex = 9;
             this.button3.Text = "Reset to defaults";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

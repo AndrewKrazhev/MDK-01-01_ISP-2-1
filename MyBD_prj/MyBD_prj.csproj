@@ -70,6 +70,9 @@
     <Compile Include="aboutForm.Designer.cs">
       <DependentUpon>aboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ArhiveDataSet.cs">
+      <DependentUpon>ArhiveDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ArhiveDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

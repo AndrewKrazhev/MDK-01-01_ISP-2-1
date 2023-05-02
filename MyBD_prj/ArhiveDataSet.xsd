@@ -86,7 +86,16 @@
               <Mapping SourceColumn="FondNumber" DataSetColumn="FondNumber" />
               <Mapping SourceColumn="OpisNumber" DataSetColumn="OpisNumber" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="ArhiveConnectionString (Settings)" DbObjectName="Dela" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByTop10" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByTop10" GeneratorSourceName="FillByTop10" GetMethodModifier="Public" GetMethodName="GetDataByTop10" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByTop10" UserSourceName="FillByTop10">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT TOP 10 id, DeloName, DeloDesc, DeloBegin, DeloEnd, FondNumber, OpisNumber FROM Dela</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FondsTableAdapter" GeneratorDataComponentClassName="FondsTableAdapter" Name="Fonds" UserDataComponentName="FondsTableAdapter">
             <MainSource>
@@ -199,39 +208,39 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="ArhiveDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="ArhiveDataSet" msprop:Generator_DataSetName="ArhiveDataSet">
+  <xs:element name="ArhiveDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ArhiveDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ArhiveDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Dela" msprop:Generator_RowEvHandlerName="DelaRowChangeEventHandler" msprop:Generator_RowDeletedName="DelaRowDeleted" msprop:Generator_RowDeletingName="DelaRowDeleting" msprop:Generator_RowEvArgName="DelaRowChangeEvent" msprop:Generator_TablePropName="Dela" msprop:Generator_RowChangedName="DelaRowChanged" msprop:Generator_RowChangingName="DelaRowChanging" msprop:Generator_TableClassName="DelaDataTable" msprop:Generator_RowClassName="DelaRow" msprop:Generator_TableVarName="tableDela" msprop:Generator_UserTableName="Dela">
+        <xs:element name="Dela" msprop:Generator_RowClassName="DelaRow" msprop:Generator_RowEvHandlerName="DelaRowChangeEventHandler" msprop:Generator_RowDeletedName="DelaRowDeleted" msprop:Generator_RowDeletingName="DelaRowDeleting" msprop:Generator_RowEvArgName="DelaRowChangeEvent" msprop:Generator_TablePropName="Dela" msprop:Generator_RowChangedName="DelaRowChanged" msprop:Generator_UserTableName="Dela" msprop:Generator_RowChangingName="DelaRowChanging" msprop:Generator_TableClassName="DelaDataTable" msprop:Generator_TableVarName="tableDela">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="DeloName" msprop:Generator_ColumnPropNameInRow="DeloName" msprop:Generator_ColumnPropNameInTable="DeloNameColumn" msprop:Generator_ColumnVarNameInTable="columnDeloName" msprop:Generator_UserColumnName="DeloName" minOccurs="0">
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:int" />
+              <xs:element name="DeloName" msprop:Generator_UserColumnName="DeloName" msprop:Generator_ColumnPropNameInTable="DeloNameColumn" msprop:Generator_ColumnPropNameInRow="DeloName" msprop:Generator_ColumnVarNameInTable="columnDeloName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DeloDesc" msprop:Generator_ColumnPropNameInRow="DeloDesc" msprop:Generator_ColumnPropNameInTable="DeloDescColumn" msprop:Generator_ColumnVarNameInTable="columnDeloDesc" msprop:Generator_UserColumnName="DeloDesc" minOccurs="0">
+              <xs:element name="DeloDesc" msprop:Generator_UserColumnName="DeloDesc" msprop:Generator_ColumnPropNameInTable="DeloDescColumn" msprop:Generator_ColumnPropNameInRow="DeloDesc" msprop:Generator_ColumnVarNameInTable="columnDeloDesc" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DeloBegin" msprop:Generator_ColumnPropNameInRow="DeloBegin" msprop:Generator_ColumnPropNameInTable="DeloBeginColumn" msprop:Generator_ColumnVarNameInTable="columnDeloBegin" msprop:Generator_UserColumnName="DeloBegin" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="DeloEnd" msprop:Generator_ColumnPropNameInRow="DeloEnd" msprop:Generator_ColumnPropNameInTable="DeloEndColumn" msprop:Generator_ColumnVarNameInTable="columnDeloEnd" msprop:Generator_UserColumnName="DeloEnd" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="FondNumber" msprop:Generator_ColumnPropNameInRow="FondNumber" msprop:Generator_ColumnPropNameInTable="FondNumberColumn" msprop:Generator_ColumnVarNameInTable="columnFondNumber" msprop:Generator_UserColumnName="FondNumber" type="xs:int" minOccurs="0" />
-              <xs:element name="OpisNumber" msprop:Generator_ColumnPropNameInRow="OpisNumber" msprop:Generator_ColumnPropNameInTable="OpisNumberColumn" msprop:Generator_ColumnVarNameInTable="columnOpisNumber" msprop:Generator_UserColumnName="OpisNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="DeloBegin" msprop:Generator_UserColumnName="DeloBegin" msprop:Generator_ColumnPropNameInTable="DeloBeginColumn" msprop:Generator_ColumnPropNameInRow="DeloBegin" msprop:Generator_ColumnVarNameInTable="columnDeloBegin" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DeloEnd" msprop:Generator_UserColumnName="DeloEnd" msprop:Generator_ColumnPropNameInTable="DeloEndColumn" msprop:Generator_ColumnPropNameInRow="DeloEnd" msprop:Generator_ColumnVarNameInTable="columnDeloEnd" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FondNumber" msprop:Generator_UserColumnName="FondNumber" msprop:Generator_ColumnPropNameInTable="FondNumberColumn" msprop:Generator_ColumnPropNameInRow="FondNumber" msprop:Generator_ColumnVarNameInTable="columnFondNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="OpisNumber" msprop:Generator_UserColumnName="OpisNumber" msprop:Generator_ColumnPropNameInTable="OpisNumberColumn" msprop:Generator_ColumnPropNameInRow="OpisNumber" msprop:Generator_ColumnVarNameInTable="columnOpisNumber" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Fonds" msprop:Generator_RowEvHandlerName="FondsRowChangeEventHandler" msprop:Generator_RowDeletedName="FondsRowDeleted" msprop:Generator_RowDeletingName="FondsRowDeleting" msprop:Generator_RowEvArgName="FondsRowChangeEvent" msprop:Generator_TablePropName="Fonds" msprop:Generator_RowChangedName="FondsRowChanged" msprop:Generator_RowChangingName="FondsRowChanging" msprop:Generator_TableClassName="FondsDataTable" msprop:Generator_RowClassName="FondsRow" msprop:Generator_TableVarName="tableFonds" msprop:Generator_UserTableName="Fonds">
+        <xs:element name="Fonds" msprop:Generator_RowClassName="FondsRow" msprop:Generator_RowEvHandlerName="FondsRowChangeEventHandler" msprop:Generator_RowDeletedName="FondsRowDeleted" msprop:Generator_RowDeletingName="FondsRowDeleting" msprop:Generator_RowEvArgName="FondsRowChangeEvent" msprop:Generator_TablePropName="Fonds" msprop:Generator_RowChangedName="FondsRowChanged" msprop:Generator_UserTableName="Fonds" msprop:Generator_RowChangingName="FondsRowChanging" msprop:Generator_TableClassName="FondsDataTable" msprop:Generator_TableVarName="tableFonds">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Код" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_UserColumnName="Код" type="xs:int" />
-              <xs:element name="Имя" msprop:Generator_ColumnPropNameInRow="Имя" msprop:Generator_ColumnPropNameInTable="ИмяColumn" msprop:Generator_ColumnVarNameInTable="columnИмя" msprop:Generator_UserColumnName="Имя" minOccurs="0">
+              <xs:element name="Код" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnVarNameInTable="columnКод" type="xs:int" />
+              <xs:element name="Имя" msprop:Generator_UserColumnName="Имя" msprop:Generator_ColumnPropNameInTable="ИмяColumn" msprop:Generator_ColumnPropNameInRow="Имя" msprop:Generator_ColumnVarNameInTable="columnИмя" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
@@ -241,25 +250,25 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Opis" msprop:Generator_RowEvHandlerName="OpisRowChangeEventHandler" msprop:Generator_RowDeletedName="OpisRowDeleted" msprop:Generator_RowDeletingName="OpisRowDeleting" msprop:Generator_RowEvArgName="OpisRowChangeEvent" msprop:Generator_TablePropName="Opis" msprop:Generator_RowChangedName="OpisRowChanged" msprop:Generator_RowChangingName="OpisRowChanging" msprop:Generator_TableClassName="OpisDataTable" msprop:Generator_RowClassName="OpisRow" msprop:Generator_TableVarName="tableOpis" msprop:Generator_UserTableName="Opis">
+        <xs:element name="Opis" msprop:Generator_RowClassName="OpisRow" msprop:Generator_RowEvHandlerName="OpisRowChangeEventHandler" msprop:Generator_RowDeletedName="OpisRowDeleted" msprop:Generator_RowDeletingName="OpisRowDeleting" msprop:Generator_RowEvArgName="OpisRowChangeEvent" msprop:Generator_TablePropName="Opis" msprop:Generator_RowChangedName="OpisRowChanged" msprop:Generator_UserTableName="Opis" msprop:Generator_RowChangingName="OpisRowChanging" msprop:Generator_TableClassName="OpisDataTable" msprop:Generator_TableVarName="tableOpis">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
-              <xs:element name="OpisName" msprop:Generator_ColumnPropNameInRow="OpisName" msprop:Generator_ColumnPropNameInTable="OpisNameColumn" msprop:Generator_ColumnVarNameInTable="columnOpisName" msprop:Generator_UserColumnName="OpisName" minOccurs="0">
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnVarNameInTable="columnid" type="xs:int" />
+              <xs:element name="OpisName" msprop:Generator_UserColumnName="OpisName" msprop:Generator_ColumnPropNameInTable="OpisNameColumn" msprop:Generator_ColumnPropNameInRow="OpisName" msprop:Generator_ColumnVarNameInTable="columnOpisName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="OpisDesc" msprop:Generator_ColumnPropNameInRow="OpisDesc" msprop:Generator_ColumnPropNameInTable="OpisDescColumn" msprop:Generator_ColumnVarNameInTable="columnOpisDesc" msprop:Generator_UserColumnName="OpisDesc" minOccurs="0">
+              <xs:element name="OpisDesc" msprop:Generator_UserColumnName="OpisDesc" msprop:Generator_ColumnPropNameInTable="OpisDescColumn" msprop:Generator_ColumnPropNameInRow="OpisDesc" msprop:Generator_ColumnVarNameInTable="columnOpisDesc" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="255" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="FonNumber" msprop:Generator_ColumnPropNameInRow="FonNumber" msprop:Generator_ColumnPropNameInTable="FonNumberColumn" msprop:Generator_ColumnVarNameInTable="columnFonNumber" msprop:Generator_UserColumnName="FonNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="FonNumber" msprop:Generator_UserColumnName="FonNumber" msprop:Generator_ColumnPropNameInTable="FonNumberColumn" msprop:Generator_ColumnPropNameInRow="FonNumber" msprop:Generator_ColumnVarNameInTable="columnFonNumber" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -280,8 +289,8 @@
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="OpisDela" msdata:parent="Opis" msdata:child="Dela" msdata:parentkey="id" msdata:childkey="OpisNumber" msprop:Generator_UserParentTable="Opis" msprop:Generator_UserChildTable="Dela" msprop:Generator_RelationVarName="relationOpisDela" msprop:Generator_UserRelationName="OpisDela" msprop:Generator_ChildPropName="GetDelaRows" msprop:Generator_ParentPropName="OpisRow" />
-      <msdata:Relationship name="FondsOpis" msdata:parent="Fonds" msdata:child="Opis" msdata:parentkey="Код" msdata:childkey="FonNumber" msprop:Generator_UserParentTable="Fonds" msprop:Generator_UserChildTable="Opis" msprop:Generator_RelationVarName="relationFondsOpis" msprop:Generator_ChildPropName="GetOpisRows" msprop:Generator_ParentPropName="FondsRow" msprop:Generator_UserRelationName="FondsOpis" />
+      <msdata:Relationship name="OpisDela" msdata:parent="Opis" msdata:child="Dela" msdata:parentkey="id" msdata:childkey="OpisNumber" msprop:Generator_UserParentTable="Opis" msprop:Generator_UserChildTable="Dela" msprop:Generator_RelationVarName="relationOpisDela" msprop:Generator_ChildPropName="GetDelaRows" msprop:Generator_ParentPropName="OpisRow" msprop:Generator_UserRelationName="OpisDela" />
+      <msdata:Relationship name="FondsOpis" msdata:parent="Fonds" msdata:child="Opis" msdata:parentkey="Код" msdata:childkey="FonNumber" msprop:Generator_UserParentTable="Fonds" msprop:Generator_UserChildTable="Opis" msprop:Generator_RelationVarName="relationFondsOpis" msprop:Generator_ChildPropName="GetOpisRows" msprop:Generator_UserRelationName="FondsOpis" msprop:Generator_ParentPropName="FondsRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
